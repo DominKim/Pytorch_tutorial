@@ -11,7 +11,7 @@
 ### 02. tensor_operations
 - tensor 사칙연산 : element wise 연산수행
 - element wise operation : 연산이 텐서의 각 요소에 독립적으로 이루어진다는 뜻
-''' python3
+``` python3
 a = torch.FloatTensor([[1, 2],
                        [3, 4]])
 b = torch.FloatTensor([[2, 2],
@@ -20,7 +20,7 @@ a == b
 # a==b output
 tensor([[False,  True],
         [ True, False]])
-'''
+```
 - inplacee opeartions : 객체에 연산을 덮어 씌우는 것
 - ex) a.mul_(b)
 - Dimension Reducing Opertations : x.sum(), x.mean()
@@ -46,3 +46,14 @@ tensor([[False,  True],
 - torch.topk(x, k = 1, dim=-1) : Return tuploe of top-k values and indices
 - x.masked_fill(maxk, value = -1) : fill the value if element of mask is True
 - torch.ones_like(x) : 크기와 디바이스도 같이 복사
+
+## Linear Layer
+### 01. matrix_multiplication
+- torch.matmul(x, y) : 행렬곱
+- torch.bmm(x, y) : 배치 행렬곱
+- * bmm은 batch size도 동일해야 된다.
+
+## loss_function
+### 02/ mse
+- torch.nn.functional.mse_loss : 함수를 구현
+- torch.nn.MSELoss() : 객체를 구현
