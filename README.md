@@ -54,6 +54,10 @@ tensor([[False,  True],
 - * bmm은 batch size도 동일해야 된다.
 
 ## loss_function
-### 02/ mse
+### 02. mse
 - torch.nn.functional.mse_loss : 함수를 구현
 - torch.nn.MSELoss() : 객체를 구현
+
+## Gradient Descent
+### 05. auto_grad
+- x.grad : 미분 값 출력
