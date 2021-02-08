@@ -1,6 +1,12 @@
 # Pytorch_tutorial
 ## Pytorch_tutorial
 
+## Our objective
+- 세상에 존재하는 알 수 없는 함수 f를 근사하는 함술 f를 찾고 싶다.\n
+- 따라서 함수 f의 동작을 정의하는 파라미터를 잘 조절해야 한다.\n
+- 손실한수는 파라미터에 따른 함수 f의 동작의 오류의 크기를 반환한다.\n
+- 따라서 손실함수를 최소화 하는 파라미터를 찾으면 된다.
+
 ### 01
 - torch.FloatTensor(x) : 가장 많이 쓰이며, 32bit
 - torch.LongTensor(x) : 정수를 담는다, 주로 index를 담을때 많이 쓰임
@@ -60,4 +66,22 @@ tensor([[False,  True],
 
 ## Gradient Descent
 ### 05. auto_grad
+- The gradient vector can be interpreted as the "direction and rate of fastest increase".
 - x.grad : 미분 값 출력
+
+## Logistic_Regression
+### 02. activation_function
+- torch.randn() : 정규분포의 랜덤한 수
+$$
+\sigma(x)=\frac{1}{1+e^{-x}}
+$$
+$$
+\text{tanh}(x)=\frac{e^x-e^{-x}}{e^x+e^{-x}}
+$$
+### 06. logistic_regression
+- 변수별 histogram을 통해 분류 정도 확인 가능
+``` python3
+for c in cols[:-1]:
+    sns.histplot(df, x=c, hue=cols[-1], bins=50, stat='probability')
+    plt.show()
+```
