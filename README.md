@@ -88,3 +88,14 @@ for c in cols[:-1]:
 
 ## Stochastic Gradient Descent
 - 배치 사이즈에 따라 모델의 학습 속도에 영향을 끼친다. 따라서 적절한 배치 사이즈를 사용하는 것 이 좋다.
+
+## Overfitting
+- Train_Loss and Valid_Loss가 같이 줄어 들면 bias나 noise없이 잘 학습 하고 있다.
+``` python3
+scaler = StandardScaler()
+scaler.fit(x[0].numpy()) # You must fit with train data only.
+
+x[0] = torch.from_numpy(scaler.transform(x[0].numpy())).float()
+x[1] = torch.from_numpy(scaler.transform(x[1].numpy())).float()
+x[2] = torch.from_numpy(scaler.transform(x[2].numpy())).float()
+```
