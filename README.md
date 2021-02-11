@@ -99,3 +99,14 @@ x[0] = torch.from_numpy(scaler.transform(x[0].numpy())).float()
 x[1] = torch.from_numpy(scaler.transform(x[1].numpy())).float()
 x[2] = torch.from_numpy(scaler.transform(x[2].numpy())).float()
 ```
+
+## DNN 
+- Precision : 내가 postive라고 예측한것 중에서 맞은 것
+- Recall : 실제 potive 중 내가 맞춘 비율, 회수율
+- AUROC : 두 클래스의 분포 간의 분리 정도를 나타낼 수 있는 metric(같은 accuracy라도 분리 정도에 따라 강인함(robustness)이 다를 수 있다. )
+- NLL Loss(Negative Log Likelihood) with Log-Softmax
+
+## Regularizations
+- Batch Normalization : 빠른 학습과 높은 성능 보장!
+- 단, RNN에는 사용할 수 없음(Layer Normalization 사용)
+- model.train(), model.eval() 엄청 중요하다. Regularization을 turn on / off하기 위해
