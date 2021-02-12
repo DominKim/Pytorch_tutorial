@@ -110,3 +110,5 @@ x[2] = torch.from_numpy(scaler.transform(x[2].numpy())).float()
 - Batch Normalization : 빠른 학습과 높은 성능 보장!
 - 단, RNN에는 사용할 수 없음(Layer Normalization 사용)
 - model.train(), model.eval() 엄청 중요하다. Regularization을 turn on / off하기 위해
+
+## Practical Excercise
