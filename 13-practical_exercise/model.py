@@ -43,7 +43,8 @@ class ImageClassifier(nn.Module):
                  dropout_p=.3):
         
         super().__init__()
-
+        
+        # assert
         assert len(hidden_sizes) > 0, "You need to specify hidden layers"
 
         last_hidden_size = input_size

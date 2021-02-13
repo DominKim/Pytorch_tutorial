@@ -112,3 +112,5 @@ x[2] = torch.from_numpy(scaler.transform(x[2].numpy())).float()
 - model.train(), model.eval() 엄청 중요하다. Regularization을 turn on / off하기 위해
 
 ## Practical Excercise
+- assert len(hidden_sizes) > 0, "You need to specify hidden layers" : 조건문이 True가 아닐 때 문장 실행
+- 방어적 프로그래밍 : 실수를 가정해 값을 보증하는 방식
