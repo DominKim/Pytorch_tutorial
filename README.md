@@ -114,3 +114,9 @@ x[2] = torch.from_numpy(scaler.transform(x[2].numpy())).float()
 ## Practical Excercise
 - assert len(hidden_sizes) > 0, "You need to specify hidden layers" : 조건문이 True가 아닐 때 문장 실행
 - 방어적 프로그래밍 : 실수를 가정해 값을 보증하는 방식
+``` python3
+# super()로 기반 클래스의 __init__ 메서드 호출
+# 파생 클래스에서 __init__ 메서드를 생략한다면 기반 클래스의 __init__이 자동으로 호출되므로 super()는 사용하지
+# 않아도 됨 
+super().__init__()
+```
