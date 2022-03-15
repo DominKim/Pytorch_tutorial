@@ -2,7 +2,7 @@
 ## Pytorch_tutorial
 
 ## Our objective
-- 세상에 존재하는 알 수 없는 함수 f를 근사하는 함술 f를 찾고 싶다.
+- 세상에 존재하는 알 수 없는 함수 f를 근사하는 함수 f를 찾고 싶다.
 - 따라서 함수 f의 동작을 정의하는 파라미터를 잘 조절해야 한다.
 - 손실한수는 파라미터에 따른 함수 f의 동작의 오류의 크기를 반환한다.
 - 따라서 손실함수를 최소화 하는 파라미터를 찾으면 된다.
@@ -114,9 +114,12 @@ x[2] = torch.from_numpy(scaler.transform(x[2].numpy())).float()
 ## Practical Excercise
 - assert len(hidden_sizes) > 0, "You need to specify hidden layers" : 조건문이 True가 아닐 때 문장 실행
 - 방어적 프로그래밍 : 실수를 가정해 값을 보증하는 방식
+<<<<<<< HEAD
 ``` python3
 # super()로 기반 클래스의 __init__ 메서드 호출
 # 파생 클래스에서 __init__ 메서드를 생략한다면 기반 클래스의 __init__이 자동으로 호출되므로 super()는 사용하지
 # 않아도 됨 
 super().__init__()
 ```
+=======
+>>>>>>> 6d435ede3a2c6770a2d58a2ef4e61ba9f1f6b52e
